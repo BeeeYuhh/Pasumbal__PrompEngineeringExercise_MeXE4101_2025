@@ -106,7 +106,51 @@ Scientific Insights
 Would you like me to also extend this explanation into a matrix-based representation (using homogeneous transformations), so students see how the math generalizes to real 3D robots?
 ```
 
+***Prompt 3:***<br>
+"I want you to act as a technician with valuable work experience in robotics in the industry. You have hands-on expertise as you have previously worked with robotic arms. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."
 
+***Answer 3:***
+```
+Got it — I’ll explain forward kinematics like I would to a trainee on the shop floor, keeping it simple and practical.
+
+What Forward Kinematics Means
+• It’s figuring out where the robot’s hand (end-effector) ends up when you tell each joint how much to move.
+• In real life, this is what lets you program a robot to reach a welding spot, pick up a part, or press a button.
+
+Example: 3-DOF Planar Arm
+• Think of a robot arm with 3 rotating joints and 3 links (like 3 connected rods).
+• Link lengths: L₁, L₂, L₃.
+• Joint angles: θ₁, θ₂, θ₃.
+
+Step-by-Step Movement
+1. First link (L₁):
+    • Stick out from the base at angle θ₁.
+    • End is at:
+      • x₁ = L₁·cos(θ₁)
+      • y₁ = L₁·sin(θ₁)
+
+2. Second link (L₂):
+    • Swings at angle θ₂, added to the first angle.
+    • End is at:
+       • x₂ = x₁ + L₂·cos(θ₁ + θ₂)
+       • y₂ = y₁ + L₂·sin(θ₁ + θ₂)
+
+3. Third link (L₃):
+    • Rotates at θ₃ on top of the first two.
+    • End-effector is at:
+       • x = x₂ + L₃·cos(θ₁ + θ₂ + θ₃)
+       • y = y₂ + L₃·sin(θ₁ + θ₂ + θ₃)
+
+Final Formulas
+• x = L₁·cos(θ₁) + L₂·cos(θ₁ + θ₂) + L₃·cos(θ₁ + θ₂ + θ₃)
+• y = L₁·sin(θ₁) + L₂·sin(θ₁ + θ₂) + L₃·sin(θ₁ + θ₂ + θ₃)
+
+Technician’s Tip
+• In the field, this math runs inside the controller. You usually just input angles or target positions.
+• But knowing FK helps you debug: if the arm doesn’t reach where expected, you can check if the angles or link lengths in the program match the real robot.
+
+Want me to also show how this applies in 3D space with real industrial robots (like welding or pick-and-place arms)?
+```
 
 
 ### Exercise 2: Chain of Thought (Step-by-step Reasoning)
