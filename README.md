@@ -4,3 +4,6 @@
 ## Instructions
  <p align="justify">
 This worksheet will help you practice crafting prompts for AI (Large Language Models) in the context of your Mechatronics Engineering courses. Follow the examples provided, then create and refine your own prompts. Write your answers in the spaces provided.
+
+## 1. Industrial Robotics (DOF, Kinematics, Jacobian Matrix)
+### Exercise 1: Role Prompting
