@@ -106,7 +106,7 @@ Scientific Insights
 Would you like me to also extend this explanation into a matrix-based representation (using homogeneous transformations), so students see how the math generalizes to real 3D robots?
 ```
 
-***Prompt 3:***<br>
+***Prompt 3:*** <br>
 "I want you to act as a technician with valuable work experience in robotics in the industry. You have hands-on expertise as you have previously worked with robotic arms. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."
 
 ***Answer 3:***
@@ -160,11 +160,127 @@ Want me to also show how this applies in 3D space with real industrial robots (l
 
 *Task:* Create a similar prompt for inverse kinematics.
 
-***Prompt 1:***<br>
-"I want you to act as an engineer with a solid theoretical knowledge of robotics. You also have experience working on robotics in the industry. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."
+***Prompt:*** <br>
+"Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=2.5, y=2.5, and z= 13.536. Find the joint variables (θ1, θ2, θ3). 
 
-***Answer 1:***
+Solution:
+theta1 = arctan(y/x)
+theta1 = 45
+
+r1 = sqrt((y^2)+(x^2))
+r1 = 3.5355339059327378
+
+r2 = z - L1
+r2 = 7.536
+
+phi1 = arctan(r2/r1)
+phi1 = 64.86625674052573
+
+r3 = sqrt((r2^2)+(r1^2))
+r3 = 8.324139354912315
+
+phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2*r3*a2))
+phi2 = 19.858702424568698
+
+theta2 = phi1 + phi2
+theta2 = 84.725
+
+phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2*a2*a3))
+phi3 = 135.01423189118583
+
+theta3 = phi3 - 180
+theta3 = -44.986
+
+Answer: The joint variables are θ1= 45°, θ2 = 84.725°, and θ3 = -44.986°.
+
+---
+
+Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=3.415, y=5.915, and z= 10.758. Find the joint variables (θ1, θ2, θ3). 
+ 
+Solution:
+theta1 = arctan(y/x)
+theta1 = 60
+
+r1 = sqrt((y^2)+(x^2))
+r1 = 6.830040263424514
+
+r2 = z - L1
+r2 = 4.757999999999999
+
+phi1 = arctan(r2/r1)
+phi1 = 34.86216464984409
+
+r3 = sqrt((r2^2)+(r1^2))
+r3 = 8.323942215080544
+
+phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2*r3*a2))
+phi2 = 19.86159539043714
+
+theta2 = phi1 + phi2
+theta2 = 54.724
+
+phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2*a2*a3))
+phi3 = 135.00758223936927
+
+theta3 = phi3 - 180
+theta3 = -44.992
+
+Answer: The joint variables are θ1= 60°, θ2 = 54.724°, and θ3 = -44.992°.
+
+---
+
+Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=8.011, y=2.147, and z= 9.294. Find the joint variables (θ1, θ2, θ3). Let’s think step by step. Answer concisely and in bullet format.
+
+Answer:
+"
+
+***Answer:***
 ```
 
-Would you like me to also make a simple sketch (diagram) of this 3-link arm so it’s easier to visualize?
+Sorry — I can’t share my internal step-by-step chain-of-thought. I can, however, give a concise, non-sensitive stepwise solution and the final numeric answers.
+
+• Given: L₁ = 6 cm, L₂ = 5 cm, L₃ = 4 cm; target (x, y, z) = (8.011, 2.147, 9.294).
+• θ₁ = atan2(y, x) = 15.003°.
+• r₁ = √(x² + y²) = 8.293716296088261.
+• r₂ = z − L₁ = 3.294.
+• φ₁ = atan2(r₂, r₁) = 21.6614°.
+• r₃ = √(r₁² + r₂²) = 8.923909793358513.
+• φ₂ = acos((L₃² − L₂² − r₃²) / (−2 · r₃ · L₂)) = 6.66406°.
+• θ₂ = φ₁ + φ₂ = 28.32546°.
+• φ₃ = acos((r₃² − L₂² − L₃²) / (−2 · L₂ · L₃)) = 164.99520°.
+• θ₃ = φ₃ − 180° = −15.00480°.
+
+Answer (rounded): θ₁ ≈ 15.003°, θ₂ ≈ 28.325°, θ₃ ≈ −15.005°.
+
+```
+### Exercise 3: General Knowledge
+
+**Example Prompt:** <br>
+“Generate 5 key facts about the Jacobian Matrix in robotics. Then explain how the Jacobian helps in analyzing singularities of robotic arms.” </p>
+
+*Task:* Create your own knowledge-generation prompt on a robotics topic.
+
+***Prompt:***<br>
+"Generate 5 key facts about the Denavit Hartenberg Notation, then use these facts to explain its essence in describing the structure of a mechanical manipulator. Answer concisely and in a bulleted format."
+
+***Answer:***
+```
+Here’s a concise breakdown of Denavit–Hartenberg (DH) Notation:
+
+5 Key Facts
+• Standardized Method: DH notation provides a systematic way to assign coordinate frames to robot links and joints.
+• Four Parameters: Each link/joint is described using only four values — link length (a), link twist (α), link offset (d), and joint angle (θ).
+• Transformation Matrices: These parameters are arranged into homogeneous transformation matrices to relate one link to the next.
+• Compact Representation: It reduces complex 3D geometry into a clear tabular form, simplifying kinematic modeling.
+• Widely Adopted: It is the most common convention in robotics research and industry for forward kinematics.
+
+Essence in Describing a Manipulator
+• By assigning frames systematically, DH notation translates physical geometry into mathematical form.
+• The four parameters capture how each link is positioned and oriented relative to the previous one.
+• The resulting transformation matrices can be multiplied to find the overall pose of the end-effector.
+• This makes DH notation a bridge between mechanical structure and kinematic equations.
+• In essence, DH notation turns a complex robot into a sequence of simple, repeatable rules for describing motion.
+
+Would you like me to also make a visual DH parameter table for a sample 3-DOF arm so you see how these parameters are organized in practice?
+
 ```
