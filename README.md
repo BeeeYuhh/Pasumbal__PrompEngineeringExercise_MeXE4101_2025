@@ -151,7 +151,7 @@ Technician’s Tip
 
 Want me to also show how this applies in 3D space with real industrial robots (like welding or pick-and-place arms)?
 ```
-
+---
 
 ### Exercise 2: Chain of Thought (Step-by-step Reasoning)
 
@@ -193,7 +193,6 @@ theta3 = -44.986
 
 Answer: The joint variables are θ1= 45°, θ2 = 84.725°, and θ3 = -44.986°.
 
----
 
 Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=3.415, y=5.915, and z= 10.758. Find the joint variables (θ1, θ2, θ3). 
  
@@ -227,7 +226,6 @@ theta3 = -44.992
 
 Answer: The joint variables are θ1= 60°, θ2 = 54.724°, and θ3 = -44.992°.
 
----
 
 Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=8.011, y=2.147, and z= 9.294. Find the joint variables (θ1, θ2, θ3). Let’s think step by step. Answer concisely and in bullet format.
 
@@ -253,6 +251,8 @@ Sorry — I can’t share my internal step-by-step chain-of-thought. I can, howe
 Answer (rounded): θ₁ ≈ 15.003°, θ₂ ≈ 28.325°, θ₃ ≈ −15.005°.
 
 ```
+---
+
 ### Exercise 3: General Knowledge
 
 **Example Prompt:** <br>
@@ -283,4 +283,25 @@ Essence in Describing a Manipulator
 
 Would you like me to also make a visual DH parameter table for a sample 3-DOF arm so you see how these parameters are organized in practice?
 
+```
+
+## 2. Microelectronics & Microprocessor (Arduino, Mobile Robots)
+### Exercise 4: Few-Shot Prompting
+
+**Example Prompt:** <br>
+“Example 1: Input: "LED not turning on in Arduino circuit." 
+Output: "Check if pinMode is set to OUTPUT and if the LED is connected correctly."
+
+Example 2: Input: "Motor driver not responding to Arduino code." 
+Output: "Check if the enable pin is HIGH and power supply is correct."
+
+Input: "Ultrasonic sensor giving 0 distance reading." 
+Output: ?” </p>
+
+*Task:* Design 3 troubleshooting examples and test AI on diagnosing hardware/software issues.
+
+***Prompt:***<br>
+"I want you to act as an engineer with a solid theoretical knowledge of robotics. You also have experience working on robotics in the industry. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."
+
+***Answer 1:***
 ```
