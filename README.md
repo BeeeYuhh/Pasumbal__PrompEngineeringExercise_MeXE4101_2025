@@ -360,7 +360,7 @@ _"You are a data analyst teaching beginners. Your students are working with two 
 ***Answer 1:***
 ```
 • Place both datasets in the same workbook (e.g., Sheet1: Student IDs; Sheet2: IDs + Grades).
-• In the table where IDs are listed, insert a new column for **Grades**.
+• In the table where IDs are listed, insert a new column for Grades.
 • Use the formula:
   =VLOOKUP(A2, Sheet2!A:B, 2, FALSE)
    • A2 → the student ID to look up
@@ -381,11 +381,11 @@ _"Your next task is to explain how to use Python (pandas merge) to match student
 • Load the datasets into DataFrames (e.g., `students` for IDs, `grades` for IDs + Grades).
     students = pd.read_csv("students.csv")
     grades = pd.read_csv("grades.csv")
-• Use `merge()` to combine them based on **student ID**:
+• Use `merge()` to combine them based on student ID:
     merged = pd.merge(students, grades, on="StudentID", how="left")
 • `on="StudentID"` → matches rows using the StudentID column.
 • `how="left"` → keeps all IDs from the `students` DataFrame, even if some don’t have grades.
-• The resulting table has **StudentID + Grade** in one DataFrame.
+• The resulting table has StudentID + Grade in one DataFrame.
 ```
 
 ***Prompt 3:*** <br>
@@ -483,7 +483,7 @@ _"Generate 5 key facts about sklearn in Python. Then, use these to demonstrate h
 • 5 Key Facts about scikit-learn (sklearn):
    • Popular Python library for machine learning and data analysis.
    • Provides tools for preprocessing, model training, and evaluation.
-   • Works seamlessly with **NumPy** and **pandas**.
+   • Works seamlessly with NumPy and pandas.
    • Focused on structured data (tables, features, labels).
    • Commonly used for regression, classification, clustering, and pipelines.
 
@@ -493,7 +493,7 @@ _"Generate 5 key facts about sklearn in Python. Then, use these to demonstrate h
         from sklearn.preprocessing import FunctionTransformer
    • Load Excel file into a DataFrame:
         df = pd.read_excel("grades.xlsx")
-   • Use sklearn’s **FunctionTransformer** to apply a custom function:
+   • Use sklearn’s FunctionTransformer to apply a custom function:
         transformer = FunctionTransformer(lambda x: x.mean())
         avg_grade = transformer.fit_transform(df[["Grade"]])
    • `df[["Grade"]]` selects the grade column.
