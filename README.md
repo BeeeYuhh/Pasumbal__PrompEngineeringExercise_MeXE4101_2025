@@ -405,3 +405,64 @@ _"Compare your answers for the Excel's VLOOKUP and the Python (pandas merge). Ex
 • Essence: VLOOKUP is simpler for small-scale tasks in Excel, while pandas merge is more powerful and scalable for programmatic data analysis.
 
 ```
+
+---
+
+### Exercise 7: Self-Consistency
+
+**Example Prompt:** <br>
+“Explain normalization in machine learning three times, each in a different way. Then select which explanation is best for beginners in Data Science.” </p>
+
+**Task:** Compare AI’s responses and highlight the most consistent explanation.
+
+***Prompt:*** <br>
+_"Explain normalization in machine learning three times, each in a different way. Format each explanation in clear bullet-point items, avoiding paragraph form. Then, select which explanation is best for beginners in Data Science. The entire answer must be in outline form using concise bullet points only."_ </br>
+
+***Answer from ChatGPT:***
+```
+• Explanation 1: Scaling Perspective
+   • Normalization rescales feature values into a specific range (commonly 0 to 1).
+   • Prevents large-valued features (e.g., income) from dominating smaller-valued ones (e.g., age).
+   • Ensures all features contribute fairly to model training.
+
+• Explanation 2: Geometry Perspective
+   • Data points are vectors in multi-dimensional space.
+   • Normalization adjusts vector lengths so they lie within a consistent scale.
+   • Helps distance-based algorithms (e.g., k-NN, clustering) compute fair comparisons.
+
+• Explanation 3: Optimization Perspective
+   • Many ML algorithms rely on gradient-based optimization.
+   • Features with different scales can make the loss function harder to minimize.
+   • Normalization smooths the optimization path, speeding up convergence.
+
+• Best for Beginners in Data Science:
+   • Explanation 1 (Scaling Perspective) → simplest, most intuitive, and directly connected to common data features like age, height, or salary.
+```
+
+***Answer from Gemini:***
+```
+• Explanation 1: The Kitchen Analogy
+   • Imagine you're baking a cake. The recipe calls for different ingredients like flour, sugar, and a pinch of salt.
+   • Flour is measured in cups, sugar in teaspoons, and salt in fractions of a teaspoon. These are very different scales.
+   • If you just poured all the ingredients into your bowl without considering their scales, the sugar and flour would overpower the salt, and the cake would be a disaster.
+   • Normalization is like standardizing your measurements. You're making sure that all ingredients (your data features) are on a similar scale so that no single ingredient dominates the others.
+   • This ensures that the model can "taste" and learn from all the ingredients equally, leading to a better "cake" (a more accurate model).
+
+• Explanation 2: The Data Transformation View
+   • Normalization is a data preprocessing technique used in machine learning.
+   • Its primary goal is to change the values of numeric columns in the dataset to a common scale, without distorting differences in the ranges of values or losing information.
+   • This is crucial for many machine learning algorithms, especially those that calculate distances or assume that all features are centered around zero and have similar variance (e.g., K-nearest neighbors, Support Vector Machines).
+   • Common methods include Min-Max scaling, which rescales the data to a fixed range (usually 0 to 1), and Z-score standardization, which transforms the data to have a mean of 0 and a standard deviation of 1.
+
+• Explanation 3: The Fair Competition Metaphor
+   • Think of your machine learning model as a judge in a competition.
+   • The competitors (the different features of your data, like age, income, and number of purchases) have different strengths.
+   • Some competitors are naturally much stronger than others (e.g., an income of $100,000 is a much larger number than an age of 35).
+   • Normalization is like giving each competitor a handicap. You're adjusting their "strength" to a common playing field.
+   • This ensures that no single feature can unfairly dominate the outcome of the competition, allowing the judge (the model) to consider all features equally and make a fair decision.
+
+• Best Explanation for Beginners
+   • Explanation 1: The Kitchen Analogy.
+   • Reason: It uses a relatable, everyday concept (baking) to demystify a technical topic. It provides an intuitive understanding of why normalization is necessary without requiring prior knowledge of statistics or machine learning algorithms. The concept of "overpowering" an ingredient translates well to "dominating" a machine learning model, making the core idea easy to grasp.
+```
+
