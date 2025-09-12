@@ -59,7 +59,7 @@ Key Takeaways
 Would you like me to also make a simple sketch (diagram) of this 3-link arm so it’s easier to visualize?
 ```
 
-***Prompt 2:***<br>
+***Prompt 2:*** <br>
 _"I want you to act as a scientist who is knowledgeable in robotics research. You approach problems with a focus on scientific foundations and investigative principles. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."_
 
 ***Answer 2:***
@@ -259,7 +259,7 @@ Answer (rounded): θ₁ ≈ 15.003°, θ₂ ≈ 28.325°, θ₃ ≈ −15.005°.
 
 **Task:** Create your own knowledge-generation prompt on a robotics topic.
 
-***Prompt:***<br>
+***Prompt:*** <br>
 _"Generate 5 key facts about the Denavit Hartenberg Notation, then use these facts to explain its essence in describing the structure of a mechanical manipulator. Answer concisely and in a bulleted format."_
 
 ***Answer:***
@@ -330,7 +330,7 @@ Classify: Line following robot with infrared sensors.” </p>
 
 **Task:** Create classification prompts for common Arduino/microprocessor projects.
 
-***Prompt:***<br>
+***Prompt:*** <br>
 _"You are a Microprocessor and Microcontroller System and Design instructor. You are teaching the difference between analog and digital signals. Below are some examples. Classify whether the last application is analog or digital. Answer concisely and in a bulleted format._ </br>
 
 _Example 1: Potentiometer controlling LED brightness → Analog </br>
@@ -344,4 +344,67 @@ _Classify: Ultrasonic sensor measuring distance"_ </br>
 ```
 • Ultrasonic sensor measuring distance → Digital
    • The sensor outputs a digital pulse signal (time-of-flight), which the microcontroller measures to calculate distance.
+```
+
+## 3. Data Science (Excel, Data Analysis, Python Libraries)
+### Exercise 6: Role Prompting
+
+**Example Prompt:** <br>
+“You are a data analyst teaching beginners. Explain how to use Excel’s VLOOKUP to match student IDs with their grades.” </p>
+
+**Task:** Rewrite the prompt for Python (pandas merge) and compare the results.
+
+***Prompt 1:*** <br>
+_"You are a data analyst teaching beginners. Your students are working with two datasets: one contains a list of student IDs, and the other contains their corresponding grades. They need to combine the datasets into a single table for easier analysis. Your first task is to explain how to use Excel’s VLOOKUP to match student IDs with their grades. Answer concisely and in a bulleted format."_ </br>
+
+***Answer 1:***
+```
+• Place both datasets in the same workbook (e.g., Sheet1: Student IDs; Sheet2: IDs + Grades).
+• In the table where IDs are listed, insert a new column for **Grades**.
+• Use the formula:
+  =VLOOKUP(A2, Sheet2!A:B, 2, FALSE)
+   • A2 → the student ID to look up
+   • Sheet2!A\:B → the range containing IDs (col A) and Grades (col B)
+   • 2 → tells Excel to return data from the 2nd column (Grades)
+   • FALSE → ensures exact match
+• Copy the formula down for all rows.
+• Now each student ID is matched with its corresponding grade.
+```
+
+***Prompt 2:*** <br>
+_"Your next task is to explain how to use Python (pandas merge) to match student IDs with their grades. Answer concisely and in a bulleted format."_ </br>
+
+***Answer 2:***
+```
+• Import pandas:
+    import pandas as pd
+
+• Load the datasets into DataFrames (e.g., `students` for IDs, `grades` for IDs + Grades).
+    students = pd.read_csv("students.csv")
+    grades = pd.read_csv("grades.csv")
+
+• Use `merge()` to combine them based on **student ID**:
+    merged = pd.merge(students, grades, on="StudentID", how="left")
+
+• `on="StudentID"` → matches rows using the StudentID column.
+• `how="left"` → keeps all IDs from the `students` DataFrame, even if some don’t have grades.
+• The resulting table has **StudentID + Grade** in one DataFrame.
+```
+
+***Prompt 3:*** <br>
+_"Compare your answers for the Excel's VLOOKUP and the Python (pandas merge). Explain concisely and in a bulleted format."_ </br>
+
+***Answer 3:***
+```
+• Similarity: Both methods join two datasets by using a common key — the Student ID.
+• Excel (VLOOKUP):
+   • Works inside spreadsheets.
+   • Formula-based: `=VLOOKUP(ID, range, col_index, FALSE)`.
+   • Requires specifying the column number manually.
+• Python (pandas merge):
+   • Works in code with DataFrames.
+   • Function-based: `pd.merge(df1, df2, on="StudentID")`.
+   • More flexible (supports multiple keys, merge types, large datasets).
+• Essence: VLOOKUP is simpler for small-scale tasks in Excel, while pandas merge is more powerful and scalable for programmatic data analysis.
+
 ```
