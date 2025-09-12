@@ -317,3 +317,31 @@ Output: (answer concisely and in a bulleted format)"_ </br>
 ```
 • Confirm that the potentiometer’s middle (wiper) pin is connected to an analog input pin.
 ```
+
+---
+
+### Exercise 5: Hybrid Prompting
+
+**Example Prompt:** <br>
+“You are an embedded systems instructor. Using the following examples, classify whether the Arduino project is sensor-based or actuator-based: <br>
+Example 1: Temperature sensor with LCD → Sensor-based <br>
+Example 2: Motor driver with wheels → Actuator-based <br>
+Classify: Line following robot with infrared sensors.” </p>
+
+**Task:** Create classification prompts for common Arduino/microprocessor projects.
+
+***Prompt:***<br>
+_"You are a Microprocessor and Microcontroller System and Design instructor. You are teaching the difference between analog and digital signals. Below are some examples. Classify whether the last application is analog or digital. Answer concisely and in a bulleted format._ </br>
+
+_Example 1: Potentiometer controlling LED brightness → Analog </br>
+Example 2: Push button controlling a buzzer → Digital </br>
+Example 3: LDR (Light Dependent Resistor) adjusting fan speed → Analog_ </br>
+
+_Classify: Ultrasonic sensor measuring distance"_ </br>
+
+
+***Answer:***
+```
+• Ultrasonic sensor measuring distance → Digital
+   • The sensor outputs a digital pulse signal (time-of-flight), which the microcontroller measures to calculate distance.
+```
