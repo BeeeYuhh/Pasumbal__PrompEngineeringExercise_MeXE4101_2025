@@ -11,10 +11,10 @@ This worksheet will help you practice crafting prompts for AI (Large Language Mo
 **Example Prompt:** <br>
 “You are a robotics professor. Explain forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example.” </p>
 
-*Task:* Try changing the role (engineer→ scientist→technician) and compare clarity of answers.
+**Task:** Try changing the role (engineer→ scientist→technician) and compare clarity of answers.
 
-***Prompt 1:***<br>
-"I want you to act as an engineer with a solid theoretical knowledge of robotics. You also have experience working on robotics in the industry. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."
+***Prompt 1:*** <br>
+_"I want you to act as an engineer with a solid theoretical knowledge of robotics. You also have experience working on robotics in the industry. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."_
 
 ***Answer 1:***
 ```
@@ -60,7 +60,7 @@ Would you like me to also make a simple sketch (diagram) of this 3-link arm so i
 ```
 
 ***Prompt 2:***<br>
-"I want you to act as a scientist who is knowledgeable in robotics research. You approach problems with a focus on scientific foundations and investigative principles. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."
+_"I want you to act as a scientist who is knowledgeable in robotics research. You approach problems with a focus on scientific foundations and investigative principles. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."_
 
 ***Answer 2:***
 ```
@@ -107,7 +107,7 @@ Would you like me to also extend this explanation into a matrix-based representa
 ```
 
 ***Prompt 3:*** <br>
-"I want you to act as a technician with valuable work experience in robotics in the industry. You have hands-on expertise as you have previously worked with robotic arms. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."
+_"I want you to act as a technician with valuable work experience in robotics in the industry. You have hands-on expertise as you have previously worked with robotic arms. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."_
 
 ***Answer 3:***
 ```
@@ -158,78 +158,78 @@ Want me to also show how this applies in 3D space with real industrial robots (l
 **Example Prompt:** <br>
 “A 2-DOF planar robot arm has link lengths L1=2 m and L2=1 m. The joint angles are θ1=30° and θ2=45°. Find the (x, y) position of the end effector. Let’s think step by step.” </p>
 
-*Task:* Create a similar prompt for inverse kinematics.
+**Task:** Create a similar prompt for inverse kinematics.
 
 ***Prompt:*** <br>
-"Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=2.5, y=2.5, and z= 13.536. Find the joint variables (θ1, θ2, θ3). <br>
+_"Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=2.5, y=2.5, and z= 13.536. Find the joint variables (θ1, θ2, θ3)._ <br>
 
-Solution: <br>
+_Solution: <br>
 theta1 = arctan(y/x) <br>
-theta1 = 45 <br>
+theta1 = 45_ <br>
 
-r1 = sqrt((y^2)+(x^2)) <br>
-r1 = 3.5355339059327378 <br>
+_r1 = sqrt((y^2)+(x^2)) <br>
+r1 = 3.5355339059327378_ <br>
 
-r2 = z - L1 <br>
-r2 = 7.536 <br>
+_r2 = z - L1 <br>
+r2 = 7.536_ <br>
 
-phi1 = arctan(r2/r1) <br>
-phi1 = 64.86625674052573 <br>
+_phi1 = arctan(r2/r1) <br>
+phi1 = 64.86625674052573_ <br>
 
-r3 = sqrt((r2^2)+(r1^2)) <br>
-r3 = 8.324139354912315 <br>
+_r3 = sqrt((r2^2)+(r1^2)) <br>
+r3 = 8.324139354912315_ <br>
 
-phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2\*r3\*a2)) <br>
-phi2 = 19.858702424568698 <br>
+_phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2\*r3\*a2)) <br>
+phi2 = 19.858702424568698_ <br>
 
-theta2 = phi1 + phi2 <br>
-theta2 = 84.725 <br>
+_theta2 = phi1 + phi2 <br>
+theta2 = 84.725_ <br>
 
-phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2\*a2\*a3)) <br>
-phi3 = 135.01423189118583 <br>
+_phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2\*a2\*a3)) <br>
+phi3 = 135.01423189118583_ <br>
 
-theta3 = phi3 - 180 <br>
-theta3 = -44.986 <br>
+_theta3 = phi3 - 180 <br>
+theta3 = -44.986_ <br>
 
-Answer: The joint variables are θ1= 45°, θ2 = 84.725°, and θ3 = -44.986°. <br>
+_Answer: The joint variables are θ1= 45°, θ2 = 84.725°, and θ3 = -44.986°._ <br>
 
 
-Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=3.415, y=5.915, and z= 10.758. Find the joint variables (θ1, θ2, θ3). <br> 
+_Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=3.415, y=5.915, and z= 10.758. Find the joint variables (θ1, θ2, θ3)._ <br> 
  
-Solution: <br>
+_Solution: <br>
 theta1 = arctan(y/x) <br>
-theta1 = 60 <br>
+theta1 = 60_ <br>
 
-r1 = sqrt((y^2)+(x^2)) <br>
-r1 = 6.830040263424514 <br>
+_r1 = sqrt((y^2)+(x^2)) <br>
+r1 = 6.830040263424514_ <br>
 
-r2 = z - L1 <br>
-r2 = 4.757999999999999 <br>
+_r2 = z - L1 <br>
+r2 = 4.757999999999999_ <br>
 
-phi1 = arctan(r2/r1) <br>
-phi1 = 34.86216464984409 <br>
+_phi1 = arctan(r2/r1) <br>
+phi1 = 34.86216464984409_ <br>
 
-r3 = sqrt((r2^2)+(r1^2)) <br>
-r3 = 8.323942215080544 <br>
+_r3 = sqrt((r2^2)+(r1^2)) <br>
+r3 = 8.323942215080544_ <br>
 
-phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2\*r3\*a2)) <br>
-phi2 = 19.86159539043714 <br>
+_phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2\*r3\*a2)) <br>
+phi2 = 19.86159539043714_ <br>
 
-theta2 = phi1 + phi2 <br>
-theta2 = 54.724 <br>
+_theta2 = phi1 + phi2 <br>
+theta2 = 54.724_ <br>
 
-phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2\*a2\*a3)) <br>
-phi3 = 135.00758223936927 <br>
+_phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2\*a2\*a3)) <br>
+phi3 = 135.00758223936927_ <br>
 
-theta3 = phi3 - 180 <br>
-theta3 = -44.992 <br>
+_theta3 = phi3 - 180 <br>
+theta3 = -44.992_ <br>
 
-Answer: The joint variables are θ1= 60°, θ2 = 54.724°, and θ3 = -44.992°. <br>
+_Answer: The joint variables are θ1= 60°, θ2 = 54.724°, and θ3 = -44.992°._ <br>
 
 
-Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=8.011, y=2.147, and z= 9.294. Find the joint variables (θ1, θ2, θ3). Let’s think step by step. Answer concisely and in bullet format. <br>
+_Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=8.011, y=2.147, and z= 9.294. Find the joint variables (θ1, θ2, θ3). Let’s think step by step. Answer concisely and in bullet format._ <br>
 
-Answer:"
+_Answer:"_
 
 ***Answer:***
 ```
@@ -257,10 +257,10 @@ Answer (rounded): θ₁ ≈ 15.003°, θ₂ ≈ 28.325°, θ₃ ≈ −15.005°.
 **Example Prompt:** <br>
 “Generate 5 key facts about the Jacobian Matrix in robotics. Then explain how the Jacobian helps in analyzing singularities of robotic arms.” </p>
 
-*Task:* Create your own knowledge-generation prompt on a robotics topic.
+**Task:** Create your own knowledge-generation prompt on a robotics topic.
 
 ***Prompt:***<br>
-"Generate 5 key facts about the Denavit Hartenberg Notation, then use these facts to explain its essence in describing the structure of a mechanical manipulator. Answer concisely and in a bulleted format."
+_"Generate 5 key facts about the Denavit Hartenberg Notation, then use these facts to explain its essence in describing the structure of a mechanical manipulator. Answer concisely and in a bulleted format."_
 
 ***Answer:***
 ```
@@ -298,20 +298,20 @@ Output: "Check if the enable pin is HIGH and power supply is correct." <br>
 Input: "Ultrasonic sensor giving 0 distance reading." <br>
 Output: ?” </p>
 
-*Task:* Design 3 troubleshooting examples and test AI on diagnosing hardware/software issues.
+**Task:** Design 3 troubleshooting examples and test AI on diagnosing hardware/software issues.
 
 ***Prompt:***<br>
-"Situation 1: Arduino IDE fails to upload the code to the Arduino Uno. </br>
-Output: • Check if the correct board and COM port are selected. </br>
+_"Situation 1: Arduino IDE fails to upload the code to the Arduino Uno. </br>
+Output: • Check if the correct board and COM port are selected._ </br>
 
-Situation 2: The LCD display does not turn on despite being connected to the Arduino Uno. </br>
-Output: • Verify that the LCD has proper power (VCC and GND). </br>
+_Situation 2: The LCD display does not turn on despite being connected to the Arduino Uno. </br>
+Output: • Verify that the LCD has proper power (VCC and GND)._ </br>
 
-Situation 3: The IR receiver LED blinks but no signal is detected in the code. </br>
-Output: • Ensure the IR receiver signal pin is connected to the correct Arduino input pin. </br>
+_Situation 3: The IR receiver LED blinks but no signal is detected in the code. </br>
+Output: • Ensure the IR receiver signal pin is connected to the correct Arduino input pin._ </br>
 
-Situation 4: The potentiometer is connected, but analog readings don’t change when adjusted. </br>
-Output: (answer concisely and in a bulleted format)" </br>
+_Situation 4: The potentiometer is connected, but analog readings don’t change when adjusted. </br>
+Output: (answer concisely and in a bulleted format)"_ </br>
 
 ***Answer:***
 ```
