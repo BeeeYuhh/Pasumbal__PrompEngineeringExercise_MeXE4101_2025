@@ -378,14 +378,11 @@ _"Your next task is to explain how to use Python (pandas merge) to match student
 ```
 • Import pandas:
     import pandas as pd
-
 • Load the datasets into DataFrames (e.g., `students` for IDs, `grades` for IDs + Grades).
     students = pd.read_csv("students.csv")
     grades = pd.read_csv("grades.csv")
-
 • Use `merge()` to combine them based on **student ID**:
     merged = pd.merge(students, grades, on="StudentID", how="left")
-
 • `on="StudentID"` → matches rows using the StudentID column.
 • `how="left"` → keeps all IDs from the `students` DataFrame, even if some don’t have grades.
 • The resulting table has **StudentID + Grade** in one DataFrame.
