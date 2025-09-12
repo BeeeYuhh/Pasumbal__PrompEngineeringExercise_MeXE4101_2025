@@ -466,3 +466,38 @@ _"Explain normalization in machine learning three times, each in a different way
    • Reason: It uses a relatable, everyday concept (baking) to demystify a technical topic. It provides an intuitive understanding of why normalization is necessary without requiring prior knowledge of statistics or machine learning algorithms. The concept of "overpowering" an ingredient translates well to "dominating" a machine learning model, making the core idea easy to grasp.
 ```
 
+---
+
+### Exercise 8: Generate Knowledge + Application
+
+**Example Prompt:** <br>
+“Generate 5 facts about pandas DataFrame in Python. Then, using these facts, show how to calculate the average grade of students from an Excel dataset.” </p>
+
+**Task:** Adapt this to matplotlib, NumPy, or sklearn.
+
+***Prompt:*** <br>
+_"Generate 5 key facts about sklearn in Python. Then, use these to demonstrate how to calculate the average grade of students from an Excel dataset. Answer concisely and in a bulleted format."_ </br>
+
+***Answer:***
+```
+• 5 Key Facts about scikit-learn (sklearn):
+   • Popular Python library for machine learning and data analysis.
+   • Provides tools for preprocessing, model training, and evaluation.
+   • Works seamlessly with **NumPy** and **pandas**.
+   • Focused on structured data (tables, features, labels).
+   • Commonly used for regression, classification, clustering, and pipelines.
+
+• Using sklearn to Calculate Average Grade from Excel:
+   • Import necessary libraries:
+        import pandas as pd
+        from sklearn.preprocessing import FunctionTransformer
+   • Load Excel file into a DataFrame:
+        df = pd.read_excel("grades.xlsx")
+   • Use sklearn’s **FunctionTransformer** to apply a custom function:
+        transformer = FunctionTransformer(lambda x: x.mean())
+        avg_grade = transformer.fit_transform(df[["Grade"]])
+   • `df[["Grade"]]` selects the grade column.
+   • `avg_grade` contains the average grade of students.
+   • Output or print:
+        print("Average Grade:", avg_grade[0])
+```
