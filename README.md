@@ -301,7 +301,19 @@ Output: ?” </p>
 *Task:* Design 3 troubleshooting examples and test AI on diagnosing hardware/software issues.
 
 ***Prompt:***<br>
-"I want you to act as an engineer with a solid theoretical knowledge of robotics. You also have experience working on robotics in the industry. My first request is to provide an explanation of the forward kinematics of a 3-DOF robotic arm to a 1st-year Mechatronics Engineering student using a simple example. Make your explanation concise and in bullet format."
+"Situation 1: Arduino IDE fails to upload the code to the Arduino Uno.
+Output: • Check if the correct board and COM port are selected.
 
-***Answer 1:***
+Situation 2: The LCD display does not turn on despite being connected to the Arduino Uno.
+Output: • Verify that the LCD has proper power (VCC and GND).
+
+Situation 3: The IR receiver LED blinks but no signal is detected in the code.
+Output: • Ensure the IR receiver signal pin is connected to the correct Arduino input pin.
+
+Situation 4: The potentiometer is connected, but analog readings don’t change when adjusted. 
+Output: (answer concisely and in a bulleted format)"
+
+***Answer:***
+```
+• Confirm that the potentiometer’s middle (wiper) pin is connected to an analog input pin.
 ```
