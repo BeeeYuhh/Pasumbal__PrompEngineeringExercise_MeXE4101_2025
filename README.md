@@ -161,76 +161,75 @@ Want me to also show how this applies in 3D space with real industrial robots (l
 *Task:* Create a similar prompt for inverse kinematics.
 
 ***Prompt:*** <br>
-"Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=2.5, y=2.5, and z= 13.536. Find the joint variables (θ1, θ2, θ3). 
+"Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=2.5, y=2.5, and z= 13.536. Find the joint variables (θ1, θ2, θ3). <br>
 
-Solution:
-theta1 = arctan(y/x)
-theta1 = 45
+Solution: <br>
+theta1 = arctan(y/x) <br>
+theta1 = 45 <br>
 
-r1 = sqrt((y^2)+(x^2))
-r1 = 3.5355339059327378
+r1 = sqrt((y^2)+(x^2)) <br>
+r1 = 3.5355339059327378 <br>
 
-r2 = z - L1
-r2 = 7.536
+r2 = z - L1 <br>
+r2 = 7.536 <br>
 
-phi1 = arctan(r2/r1)
-phi1 = 64.86625674052573
+phi1 = arctan(r2/r1) <br>
+phi1 = 64.86625674052573 <br>
 
-r3 = sqrt((r2^2)+(r1^2))
-r3 = 8.324139354912315
+r3 = sqrt((r2^2)+(r1^2)) <br>
+r3 = 8.324139354912315 <br>
 
-phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2*r3*a2))
-phi2 = 19.858702424568698
+phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2\*r3\*a2)) <br>
+phi2 = 19.858702424568698 <br>
 
-theta2 = phi1 + phi2
-theta2 = 84.725
+theta2 = phi1 + phi2 <br>
+theta2 = 84.725 <br>
 
-phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2*a2*a3))
-phi3 = 135.01423189118583
+phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2\*a2\*a3)) <br>
+phi3 = 135.01423189118583 <br>
 
-theta3 = phi3 - 180
-theta3 = -44.986
+theta3 = phi3 - 180 <br>
+theta3 = -44.986 <br>
 
-Answer: The joint variables are θ1= 45°, θ2 = 84.725°, and θ3 = -44.986°.
+Answer: The joint variables are θ1= 45°, θ2 = 84.725°, and θ3 = -44.986°. <br>
 
 
-Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=3.415, y=5.915, and z= 10.758. Find the joint variables (θ1, θ2, θ3). 
+Sample Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=3.415, y=5.915, and z= 10.758. Find the joint variables (θ1, θ2, θ3). <br> 
  
-Solution:
-theta1 = arctan(y/x)
-theta1 = 60
+Solution: <br>
+theta1 = arctan(y/x) <br>
+theta1 = 60 <br>
 
-r1 = sqrt((y^2)+(x^2))
-r1 = 6.830040263424514
+r1 = sqrt((y^2)+(x^2)) <br>
+r1 = 6.830040263424514 <br>
 
-r2 = z - L1
-r2 = 4.757999999999999
+r2 = z - L1 <br>
+r2 = 4.757999999999999 <br>
 
-phi1 = arctan(r2/r1)
-phi1 = 34.86216464984409
+phi1 = arctan(r2/r1) <br>
+phi1 = 34.86216464984409 <br>
 
-r3 = sqrt((r2^2)+(r1^2))
-r3 = 8.323942215080544
+r3 = sqrt((r2^2)+(r1^2)) <br>
+r3 = 8.323942215080544 <br>
 
-phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2*r3*a2))
-phi2 = 19.86159539043714
+phi2 = arccos((a3^2 - L2^2 - r3^2)/(-2\*r3\*a2)) <br>
+phi2 = 19.86159539043714 <br>
 
-theta2 = phi1 + phi2
-theta2 = 54.724
+theta2 = phi1 + phi2 <br>
+theta2 = 54.724 <br>
 
-phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2*a2*a3))
-phi3 = 135.00758223936927
+phi3 = arccos((r3^2 - a2^2 - L3^2)/(-2\*a2\*a3)) <br>
+phi3 = 135.00758223936927 <br>
 
-theta3 = phi3 - 180
-theta3 = -44.992
+theta3 = phi3 - 180 <br>
+theta3 = -44.992 <br>
 
-Answer: The joint variables are θ1= 60°, θ2 = 54.724°, and θ3 = -44.992°.
+Answer: The joint variables are θ1= 60°, θ2 = 54.724°, and θ3 = -44.992°. <br>
 
 
-Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=8.011, y=2.147, and z= 9.294. Find the joint variables (θ1, θ2, θ3). Let’s think step by step. Answer concisely and in bullet format.
+Question: A 3-DOF spatial articulated robot arm has link lengths L1=6 cm, L2=5cm, and L3=4cm. The position vectors of the end effector are x=8.011, y=2.147, and z= 9.294. Find the joint variables (θ1, θ2, θ3). Let’s think step by step. Answer concisely and in bullet format. <br>
 
-Answer:
-"
+Answer:"
 
 ***Answer:***
 ```
@@ -289,29 +288,30 @@ Would you like me to also make a visual DH parameter table for a sample 3-DOF ar
 ### Exercise 4: Few-Shot Prompting
 
 **Example Prompt:** <br>
-“Example 1: Input: "LED not turning on in Arduino circuit." 
-Output: "Check if pinMode is set to OUTPUT and if the LED is connected correctly."
+“Example 1: <br>
+Input: "LED not turning on in Arduino circuit." <br> 
+Output: "Check if pinMode is set to OUTPUT and if the LED is connected correctly." <br>
 
-Example 2: Input: "Motor driver not responding to Arduino code." 
-Output: "Check if the enable pin is HIGH and power supply is correct."
+Example 2: Input: "Motor driver not responding to Arduino code." <br>
+Output: "Check if the enable pin is HIGH and power supply is correct." <br>
 
-Input: "Ultrasonic sensor giving 0 distance reading." 
+Input: "Ultrasonic sensor giving 0 distance reading." <br>
 Output: ?” </p>
 
 *Task:* Design 3 troubleshooting examples and test AI on diagnosing hardware/software issues.
 
 ***Prompt:***<br>
-"Situation 1: Arduino IDE fails to upload the code to the Arduino Uno.
-Output: • Check if the correct board and COM port are selected.
+"Situation 1: Arduino IDE fails to upload the code to the Arduino Uno. </br>
+Output: • Check if the correct board and COM port are selected. </br>
 
-Situation 2: The LCD display does not turn on despite being connected to the Arduino Uno.
-Output: • Verify that the LCD has proper power (VCC and GND).
+Situation 2: The LCD display does not turn on despite being connected to the Arduino Uno. </br>
+Output: • Verify that the LCD has proper power (VCC and GND). </br>
 
-Situation 3: The IR receiver LED blinks but no signal is detected in the code.
-Output: • Ensure the IR receiver signal pin is connected to the correct Arduino input pin.
+Situation 3: The IR receiver LED blinks but no signal is detected in the code. </br>
+Output: • Ensure the IR receiver signal pin is connected to the correct Arduino input pin. </br>
 
-Situation 4: The potentiometer is connected, but analog readings don’t change when adjusted. 
-Output: (answer concisely and in a bulleted format)"
+Situation 4: The potentiometer is connected, but analog readings don’t change when adjusted. </br>
+Output: (answer concisely and in a bulleted format)" </br>
 
 ***Answer:***
 ```
