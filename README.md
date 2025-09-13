@@ -151,6 +151,11 @@ Technician’s Tip
 
 Want me to also show how this applies in 3D space with real industrial robots (like welding or pick-and-place arms)?
 ```
+
+**Comparison on the clarity of answers:** </br>
+1. Answer for the "engineer" role
+    • Combination of both theoretical and 
+
 ---
 
 ### Exercise 2: Chain of Thought (Step-by-step Reasoning)
