@@ -483,6 +483,11 @@ _"Explain normalization in machine learning three times, each in a different way
    • Reason: It uses a relatable, everyday concept (baking) to demystify a technical topic. It provides an intuitive understanding of why normalization is necessary without requiring prior knowledge of statistics or machine learning algorithms. The concept of "overpowering" an ingredient translates well to "dominating" a machine learning model, making the core idea easy to grasp.
 ```
 
+**Comparison on the consistency of answers:** </br>
+• ChatGPT gave answers with three bullet points each; Gemini’s answers varied in length with 4–5 bullet points. </br>
+• ChatGPT kept a uniform technical tone, while Gemini mixed analogies with technical details. </br>
+• ChatGPT’s structure was easy to compare side by side; Gemini’s varied style made comparisons among the three answers less direct. </br>
+
 ---
 
 ### Exercise 8: Generate Knowledge + Application
