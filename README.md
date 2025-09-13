@@ -153,9 +153,21 @@ Want me to also show how this applies in 3D space with real industrial robots (l
 ```
 
 **Comparison on the clarity of answers:** </br>
-1. Answer for the "engineer" role
-    • Combination of both theoretical and 
+1. Answer for the "engineer" role </br>
+    • Clear step-by-step math explanation with formulas for each stage </br>
+    • Balances theory with a practical example, making it accessible </br>
+    • Slightly technical for beginners; could overwhelm with notation early </br>
+    
+2. Answer for the "scientist" role </br>
+    • Strong emphasis on definitions and scientific foundations </br>
+    • Clear structure in derivation steps, consistent with research-level clarity </br>
+    • More abstract; less relatable for a first-year student </br>
 
+3. Answer for the "technician" role </br>
+    • Very relatable, uses real-world applications for context </br>
+    • Simplifies the math explanation while keeping formulas intact </br>
+    • Less emphasis on theoretical background, so may not build strong conceptual depth for long-term understanding </br>
+    
 ---
 
 ### Exercise 2: Chain of Thought (Step-by-step Reasoning)
